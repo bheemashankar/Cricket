@@ -2,8 +2,8 @@
 Django Project - Cricket - Teams, playes, Matches Fixture, Points
 
 
-Administrator Credentials
-admin/admin
+# Administrator Credentials
+  - admin/admin
 
 # Models:
   - Team - Table
