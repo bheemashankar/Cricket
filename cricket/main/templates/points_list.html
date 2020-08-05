@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Teams Points</h2>
+    
+    <table class="table table-bordered table-hovered "cellspacing='0'>
+    	<tr>
+    		<th>Team</th>
+    		<th>Points</th>
+    	</tr>
+    	{% for each in points_list %}
+    	<tr>
+    		<td><img src="{{ each.0.logo_url.url }}" width="30" height="30" alt="img">{{ each.0.name }}</td>
+    		<td>{{ each|last }}</td>
+    	</tr>
+    	{% endfor %}
+    </table>
+{% endblock %}

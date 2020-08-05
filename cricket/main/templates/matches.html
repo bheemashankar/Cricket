@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load main_extras %}
+
+{% block content %}
+    <h2>Matche Fixtures</h2>
+    <p>For create the Match Fixtures, please select two are more teams and submit.</p>
+    {% include "matches_form.html" %}
+    
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+    
+    <table class="table table-bordered table-hovered "cellspacing='0'>
+        <tr>
+            <th>SNO</th>
+            <th>Team A</th>
+    		<th> Verus </th>
+    		<th>Team B</th>
+    		<th>Winner</th>
+            <th>Actions</th>
+        </tr>
+        {% for each in matches_list %}
+        <tr>
+            <td> {{ forloop.counter }} </td>
+			<td>{{ each.left_team }}</td>
+			<td> Vs </td>
+			<td> {{ each.right_team }}</td>
+			<td> {{ each.winner_team|get_teamname }}</td>
+            <td>
+                <a class="glyphicon glyphicon-pencil" data-toggle="modal" href="{% url 'main:match_update' each.id %}" data-target="#modal" title="edit item" data-tooltip></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+  
+
+{% endblock %}
+
+{% block script %}
+$(document).ready(function(){
+    $(".check").click(function(){
+        $("#id_teams input").prop("checked", true);
+    });
+    $(".uncheck").click(function(){
+        $("#id_teams input").prop("checked", false);
+    });
+});
+{% endblock %}
+
+{% block css %}
+	table {
+		border: 1px solid;
+    	width: 100%;
+    }
+{% endblock %}

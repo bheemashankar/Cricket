@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Match Fixture Winner Update</h2>
+   
+   	<table style="width: 100%">
+   		<tr>
+   			<th>Team A</th>
+   			<th>VS</th>
+   			<th>Team B</th>
+   		<tr>
+   		<tr>
+   			<td><img src="{{ match.left_team.logo_url.url }}" width="30" height="30" alt="img">{{ match.left_team }}</td>
+   			<td>VS</th>
+   			<td><img src="{{ match.right_team.logo_url.url }}" width="30" height="30" alt="img">{{ match.right_team }}</td>
+   		<tr>
+   	</table>
+
+
+    <form method="POST">{% csrf_token %}
+		{% for each in form %}
+		<div class="myradio">
+		  	{{ each.label }}{{ each }}
+		</div>
+		{% endfor %}
+		<a href="{% url 'main:matches' %}">
+		   <input type="button" class="btn btn-default" value="Cancel" />
+		</a>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+{% endblock %}

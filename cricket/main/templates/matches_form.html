@@ -1,0 +1,10 @@
+	<form method="POST">{% csrf_token %}
+		{% for each in form %}
+		<div class="myradio">
+		  	{{ each.label }}{{ each }}
+		</div>
+		{% endfor %}
+        <button type="button" class="check btn btn-default">Check</button>
+        <button type="button" class="uncheck btn btn-default">Uncheck</button>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>

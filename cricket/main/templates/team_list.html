@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>All Teams</h2>
+    <table>
+        {% for each in team_list %}
+		<tr>
+			<td><a href="{{ each.get_absolute_url }}"><img src="{{ each.logo_url.url }}" width="30" height="30" alt="img">{{ each.name }}</a></td>
+		</tr>		
+        {% endfor %}
+    </table>
+{% endblock %}

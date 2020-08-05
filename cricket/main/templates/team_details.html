@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Team Details</h2>
+    <p> <img src="{{ object.logo_url.url }}" width="30" height="30" alt="img"> {{ object.name }} </p>
+    <table class="table table-bordered table-hovered "cellspacing='0' style="margin-left: 30px;">
+    	<tr>
+    		<th>Player</th>
+    		<th>Country</th>
+    	</tr>
+        {% for each in team_details %}
+        <tr>
+			<td><a href="{{ each.get_absolute_url }}"><img src="{{ each.image_url.url }}" width="30" height="30" alt="img"></a>{{ each.get_fullname }}</td>
+        	<td>{{ each.Country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
