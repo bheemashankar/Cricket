@@ -37,6 +37,22 @@ Django Project - Cricket - Teams, playes, Matches Fixture, Points
   - /matches/ - list of match fixtures can generate and view.
   - /match/<int:pk>/update - update the match by choosing the winner team column. 
   - /points/  - see the points of each team (2 points for win, 1 points for both/draw)
-  
-  
+
+# Prerequesties
+  - Python3
+  - Django2.2
+  - Pillow
+
+# Running the project
+  - Download the repository.
+  - Install the package.
+    - `$ pip install <project_dir>/requiements.txt`
+  - No need to do migrations.
+  - Run the server
+    - `$ python manage.py runserver`
+  - Verify the project by navigating to your server address in your preferred browser.
+    ```sh
+    127.0.0.1:8000
+    ```
+    
     
