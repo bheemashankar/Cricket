@@ -1,7 +1,6 @@
 # Cricket
 Django Project - Cricket - Teams, playes, Matches Fixture, Points
 
-
 # Administrator Credentials
   - admin/admin
 
@@ -28,14 +27,13 @@ Django Project - Cricket - Teams, playes, Matches Fixture, Points
     - left_team - Foreginkey to Team
     - right_team - Foreginkey to Team
     - winner_team - choice field (left_team, right_team, Not played, cancelled, both/draw)
-    
 
 # Urls:
   - / - list of teams
   - /teams/ - list of teams
-  - /teams/<int:pk>/details - team details and list of players
+  - /teams/&lt;int:pk&gt;/details - team details and list of players
   - /matches/ - list of match fixtures can generate and view.
-  - /match/<int:pk>/update - update the match by choosing the winner team column. 
+  - /match/&lt;int:pk&gt;/update - update the match by choosing the winner team column. 
   - /points/  - see the points of each team (2 points for win, 1 points for both/draw)
 
 # Prerequesties
