@@ -1,4 +1,7 @@
-def rb_mixture(units, sets = None):
+""" module for utilities"""
+
+
+def rb_mixture(units, sets=None):
     """ Generates a schedule of "fair" pairings from a list of units """
     count = len(units)
     sets = sets or (count - 1)
@@ -11,4 +14,3 @@ def rb_mixture(units, sets = None):
             pairings = [(y, x) for (x, y) in pairings]
         units.insert(1, units.pop())
         yield pairings
-

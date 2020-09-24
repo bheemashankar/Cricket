@@ -1,0 +1,5 @@
+[run]
+source =
+    cricket
+omit =
+    cricket/main/migrations/*
