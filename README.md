@@ -47,7 +47,7 @@ Django Project - Cricket - Teams, playes, Matches Fixture, Points
     - `$ pip install <project_dir>/requiements.txt`
   - No need to do migrations.
   - Run the server
-    - `$ python manage.py runserver`
+    ```$ python manage.py runserver```
   - Verify the project by navigating to your server address in your preferred browser.
     ```sh
     127.0.0.1:8000
